@@ -1,0 +1,19 @@
+replicaCount: 10
+namespace: default
+
+service:
+  name: "stepladder1"
+  port: 80
+  targetPort: 80
+
+image:
+  repository: ivanmds2/stepladder
+  tag: 1.0.4
+
+resources: 
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
